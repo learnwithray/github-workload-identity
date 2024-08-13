@@ -23,7 +23,7 @@ jobs:
     # Configure Workload Identity Federation and generate an access token.
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
-      uses: 'google-github-actions/auth@v1'
+      uses: 'google-github-actions/auth@v2'
       with:
         token_format: 'access_token'
         workload_identity_provider:  ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
@@ -33,3 +33,23 @@ jobs:
     - name: List Instances
       run: |-
         gcloud compute instances list --project $PROJECT_ID
+
+
+
+
+
+
+# jobs:
+#   job_id:
+#     # Add "id-token" with the intended permissions.
+#     permissions:
+#       contents: 'read'
+#       id-token: 'write'
+
+#     steps:
+#     - uses: 'actions/checkout@v4'
+
+#     - uses: 'google-github-actions/auth@v2'
+#       with:
+#         project_id: 'my-project'
+#         workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
