@@ -8,9 +8,10 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
 
 jobs:
-  setup-prepare-list:
-    name: Setup, Prepare,
+  build:
+    name: workload-identity
     runs-on: ubuntu-latest
+    timeout-minutes: 90
 
     permissions:
       contents: 'read'
