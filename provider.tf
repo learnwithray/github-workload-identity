@@ -1,4 +1,4 @@
 provider "google" {
-  project     = "burner-mansaini"
+  project     = "rayasiniz"
   region      = "us-central1"
 }
