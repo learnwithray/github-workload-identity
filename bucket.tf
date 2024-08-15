@@ -1,7 +1,9 @@
+### Enable this to provision the storage bucket 
+
 # resource "google_storage_bucket" "my-bucket" {
-#   name                     = "mansaini-008"
+#   name                     = "rayasiniz-008"
 #   location                 = "us-central1"
-#   project                  = "burner-mansaini"
+#   project                  = "rayasiniz"
 #   force_destroy            = true
 #   public_access_prevention = "enforced"
 # }
