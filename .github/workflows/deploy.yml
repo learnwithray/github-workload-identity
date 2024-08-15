@@ -30,7 +30,7 @@ jobs:
     - id: auth
       uses: google-github-actions/auth@v2.0.0  
       with:
-        workload_identity_provider: 'projects/99823646674/locations/global/workloadIdentityPools/github-workload-identity-pool//subject/repo:livewithray/github-workload-identity:ref:refs/heads/main'
+        workload_identity_provider: 'projects/99823646674/locations/global/workloadIdentityPools/github-workload-identity-pool/providers/github-actions-oidc'
         service_account: 'github-workload-identity-sa@burner-mansaini.iam.gserviceaccount.com'
 
 
